@@ -1,3 +1,4 @@
+<%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page session="false" %>
 <html>
@@ -10,6 +11,6 @@
 </h1>
 
 <P>  The time on the server is ${serverTime}. </P>
-<P>  git 테스트으~~ </P>
+<P>  git 한글이 깨져서 다시 커밋 테스트 </P>
 </body>
 </html>
