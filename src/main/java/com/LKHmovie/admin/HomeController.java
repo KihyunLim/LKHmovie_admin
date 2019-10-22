@@ -53,10 +53,10 @@ public class HomeController {
 		try {
 			conn = dataSource.getConnection();
 			st = conn.createStatement();
-			ResultSet rs = st.executeQuery("select now() as now;");
+			ResultSet rs = st.executeQuery("SELECT ID FROM ADMIN WHERE ID='ROOT';");
 			
 			while(rs.next() ) {
-				model.addAttribute("dbTime", rs.getString("now"));
+				model.addAttribute("dbTime", rs.getString("ID"));
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
