@@ -9,6 +9,7 @@ import java.util.Date;
 import java.util.Locale;
 
 import org.apache.commons.dbcp2.BasicDataSource;
+import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +24,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class HomeController {
 	
-	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(HomeController.class);
+	
 	
 	@Autowired
 	BasicDataSource dataSource;
@@ -33,7 +35,7 @@ public class HomeController {
 	 */
 	@RequestMapping(value = "/home.do", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
+		LOGGER.info("Welcome home! The client locale is {}.", locale);
 		
 		Date date = new Date();
 		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
@@ -54,6 +56,8 @@ public class HomeController {
 			conn = dataSource.getConnection();
 			st = conn.createStatement();
 			ResultSet rs = st.executeQuery("SELECT ID FROM ADMIN WHERE ID='ROOT';");
+			
+			LOGGER.info("logger test");
 			
 			while(rs.next() ) {
 				model.addAttribute("dbTime", rs.getString("ID"));

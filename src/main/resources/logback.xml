@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+	<property name="LOG_DIR" value="C:/eng/log/LKHmovie_admin"></property>
+
+	<!-- Appenders -->
+	<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<charset>UTF-8</charset>
+			<Pattern>
+				%d{HH:mm:ss.SSS} [%thread] %-5level %logger{5} - %msg%n
+			</Pattern>
+		</encoder>
+	</appender>
+	
+	<appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${LOG_DIR}/LKHmovie_admin.log</file>
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<Pattern>
+				%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{5} - %msg%n
+			</Pattern>
+		</encoder>
+		
+		<!-- 일자에 따른 로그파일 처리 -->
+		<rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+			<fileNamePattern>${LOG_DIR}/LKHmovie_admin-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+			<maxFileSize>10MB</maxFileSize>
+			<maxHistory>30</maxHistory>
+		</rollingPolicy>
+		
+		<!-- 용량에 따른 로그파일 처리 -->
+		<!-- <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+			<MaxFileSize>10MB</MaxFileSize>
+		</triggeringPolicy>
+		
+		<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+			<FileNamePattern>${LOG_DIR}/LKHmovie_admin.%i.log.zip</FileNamePattern>
+			<MinIndex>1</MinIndex>
+			<MaxIndex>10</MaxIndex>
+		</rollingPolicy> -->
+	</appender>
+	
+	<!-- Application Loggers -->
+	<logger name="com.LKHmovie" level="info" additivity="false">
+		<appender-ref ref="console" />
+		<!-- <appender-ref ref="file" /> -->
+	</logger>
+	
+	<!-- Query Loggers -->
+	<logger name="jdbc.sqlonly" level="info" additivity="false">
+		<appender-ref ref="console" />
+		<!-- <appender-ref ref="file" /> -->
+	</logger>
+	
+	<logger name="jdbc.resultsettable" level="info" additivity="false">
+		<appender-ref ref="console" />
+		<!-- <appender-ref ref="file" /> -->
+	</logger>
+
+	<!-- 3rdparty Loggers -->
+	<logger name="org.springframework.core" level="info">
+		<appender-ref ref="console" />
+		<!-- <appender-ref ref="file" /> -->
+	</logger>
+	
+	<logger name="org.springframework.beans" level="info">
+		<appender-ref ref="console" />
+		<!-- <appender-ref ref="file" /> -->
+	</logger>
+	
+	<logger name="org.springframework.context" level="info">
+		<appender-ref ref="console" />
+		<!-- <appender-ref ref="file" /> -->
+	</logger>
+
+	<logger name="org.springframework.web" level="info">
+		<appender-ref ref="console" />
+		<!-- <appender-ref ref="file" /> -->
+	</logger>
+
+	<!-- Root Logger -->
+	<root level="warn">
+		<appender-ref ref="console" />
+		<!-- <appender-ref ref="file" /> -->
+	</root>
+	
+</configuration>
