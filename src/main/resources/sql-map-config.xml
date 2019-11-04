@@ -5,10 +5,10 @@
 <configuration>
 
 	<typeAliases>
-		<!-- <typeAlias type="user" alias="com.LKHmovie.biz.user.UserVO"></typeAlias> -->
+		<typeAlias alias="testList" type="com.LKHmovie.biz.test.list.TestListVO"></typeAlias>
 	</typeAliases>
 
 	<mappers>
-		<!-- <mapper resource="mappings/useres-mapping.xml" /> -->
+		<mapper resource="mappings/test-mapping.xml" />
 	</mappers>
 </configuration>
