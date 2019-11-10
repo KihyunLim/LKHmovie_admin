@@ -74,4 +74,11 @@ public class HomeController {
 		
 		return "home_dbTest";
 	}
+	
+	@RequestMapping(value = "/bootstrapTest.do", method = RequestMethod.GET)
+	public String bootStrapTest(Model model) {
+		model.addAttribute("testText", "hello world!!");
+		
+		return "home_bootstrapTest";
+	}
 }
