@@ -4,16 +4,16 @@
 <html>
 
 <!-- meta -->
-<%@ include file="./include/meta.jsp" %>
+<%@ include file="./include/adminLTE/meta.jsp" %>
 
 <body class="hold-transition sidebar-mini">
 	<!-- Site wrapper -->
 	<div class="wrapper">
 		<!-- Navbar -->
-		<%@ include file="./include/navbar.jsp" %>
+		<%@ include file="./include/adminLTE/navbar.jsp" %>
 
 		<!-- Main Sidebar Container -->
-		<%@ include file="./include/sidebar.jsp" %>
+		<%@ include file="./include/adminLTE/sidebar.jsp" %>
 
 		<!-- Content Wrapper. Contains page content -->
 		<div class="content-wrapper">
@@ -70,7 +70,7 @@
 		<!-- /.content-wrapper -->
 
 		<!-- footer -->
-		<%@ include file="./include/footer.jsp" %>
+		<%@ include file="./include/adminLTE/footer.jsp" %>
 
 		<!-- Control Sidebar --> <!-- 쓰이는데가 없는 듯하다 -->
 		<!-- <aside class="control-sidebar control-sidebar-dark">
@@ -81,7 +81,7 @@
 	<!-- ./wrapper -->
 
 	<!-- script -->
-	<%@ include file="./include/script.jsp" %>
+	<%@ include file="./include/adminLTE/script.jsp" %>
 
 </body>
 </html>

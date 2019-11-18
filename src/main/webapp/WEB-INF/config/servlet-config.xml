@@ -11,8 +11,11 @@
 	<context:component-scan base-package="com.LKHmovie.admin"></context:component-scan>
 	<context:component-scan base-package="com.LKHmovie.controller"></context:component-scan>
 	
+	<!-- HandlerMapping, HandlerAdapter를 등록 -->
+	<mvc:annotation-driven></mvc:annotation-driven>
+	
 	<!-- 부트스트랩 추가 -->
-	<!-- <mvc:resources mapping="/resources/**" location="/resources/" /> -->
+	<mvc:resources mapping="/resources/**" location="/resources/" />
 
 	<!-- resolver 설정 추가 -->
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">

@@ -7,7 +7,7 @@
 		<li class="nav-item"><a class="nav-link" data-widget="pushmenu"
 			href="#"><i class="fas fa-bars"></i></a></li>
 		<li class="nav-item d-none d-sm-inline-block"><a
-			href="resources/index3.html" class="nav-link">Home</a></li>
+			href="resources/adminLTE/index3.html" class="nav-link">Home</a></li>
 		<li class="nav-item d-none d-sm-inline-block"><a href="#"
 			class="nav-link">Contact</a></li>
 	</ul>
@@ -35,7 +35,7 @@
 			<div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
 				<a href="#" class="dropdown-item"> <!-- Message Start -->
 					<div class="media">
-						<img src="resources/dist/img/user1-128x128.jpg" alt="User Avatar"
+						<img src="resources/adminLTE/dist/img/user1-128x128.jpg" alt="User Avatar"
 							class="img-size-50 mr-3 img-circle">
 						<div class="media-body">
 							<h3 class="dropdown-item-title">
@@ -52,7 +52,7 @@
 				<div class="dropdown-divider"></div>
 				<a href="#" class="dropdown-item"> <!-- Message Start -->
 					<div class="media">
-						<img src="resources/dist/img/user8-128x128.jpg" alt="User Avatar"
+						<img src="resources/adminLTE/dist/img/user8-128x128.jpg" alt="User Avatar"
 							class="img-size-50 img-circle mr-3">
 						<div class="media-body">
 							<h3 class="dropdown-item-title">
@@ -69,7 +69,7 @@
 				<div class="dropdown-divider"></div>
 				<a href="#" class="dropdown-item"> <!-- Message Start -->
 					<div class="media">
-						<img src="resources/dist/img/user3-128x128.jpg" alt="User Avatar"
+						<img src="resources/adminLTE/dist/img/user3-128x128.jpg" alt="User Avatar"
 							class="img-size-50 img-circle mr-3">
 						<div class="media-body">
 							<h3 class="dropdown-item-title">

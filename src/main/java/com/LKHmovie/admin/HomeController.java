@@ -11,7 +11,6 @@ import java.util.Locale;
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -80,5 +79,12 @@ public class HomeController {
 		model.addAttribute("testText", "hello world!!");
 		
 		return "home_bootstrapTest";
+	}
+	
+	@RequestMapping(value = "/bootstrapTest2.do", method = RequestMethod.GET)
+	public String bootStrapTest2(Model model) {
+		model.addAttribute("testText", "hello world22222!!");
+		
+		return "home_bootstrapTest2";
 	}
 }
