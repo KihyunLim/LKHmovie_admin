@@ -4,6 +4,52 @@
   
 <mapper namespace="TestListDAO">
 	<select id="getTestList" resultType="testList">
-		SELECT * FROM USERLIST;
+		SELECT 
+			* 
+		FROM 
+			USERLIST;
 	</select>
+	
+	<select id="getTestUser" resultType="testList">
+		SELECT 
+			* 
+		FROM 
+			USERLIST 
+		WHERE 
+			ID = #{id};
+	</select>
+	
+	<insert id="insertTestUser">
+		INSERT
+		INTO
+			USERLIST (
+				ID,
+				PASSWORD,
+				NAME,
+				PHONE
+			)
+			VALUES (
+				#{id},
+				#{password},
+				#{name},
+				#{phone}
+			);
+	</insert>
+	
+	<update id="updateTestUser">
+		UPDATE
+			USERLIST
+		SET
+			PHONE = #{phone}
+		WHERE
+			ID = #{id};
+	</update>
+	
+	<delete id="deleteTestUser">
+		DELETE 
+		FROM
+			USERLIST
+		WHERE
+			ID = #{id};
+	</delete>
 </mapper>

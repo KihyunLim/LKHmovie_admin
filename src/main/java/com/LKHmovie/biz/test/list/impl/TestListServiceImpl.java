@@ -17,4 +17,24 @@ public class TestListServiceImpl implements TestListService{
 	public List<TestListVO> getTestList() {
 		return listDAO.getTestList();
 	}
+
+	@Override
+	public TestListVO getTestUser(String id) {
+		return listDAO.getTestUser(id);
+	}
+
+	@Override
+	public void insertTestUser(TestListVO vo) {
+		listDAO.insertTestUser(vo);
+	}
+	
+	@Override
+	public void updateTestUser(TestListVO vo) {
+		listDAO.updateTestUser(vo);
+	}
+
+	@Override
+	public void deleteTestUser(String id) {
+		listDAO.deleteTestUser(id);
+	}
 }

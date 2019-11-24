@@ -17,4 +17,20 @@ public class TestListDAOMybatis {
 	public List<TestListVO> getTestList() {
 		return mybatis.selectList("TestListDAO.getTestList");
 	}
+	
+	public TestListVO getTestUser(String id) {
+		return mybatis.selectOne("TestListDAO.getTestUser", id);
+	}
+	
+	public void insertTestUser(TestListVO vo) {
+		mybatis.insert("TestListDAO.insertTestUser", vo);
+	}
+	
+	public void updateTestUser(TestListVO vo) {
+		mybatis.update("TestListDAO.updateTestUser", vo);
+	}
+	
+	public void deleteTestUser(String id) {
+		mybatis.delete("TestListDAO.deleteTestUser", id);
+	}
 }

@@ -13,6 +13,8 @@
 	
 	<!-- HandlerMapping, HandlerAdapter를 등록 -->
 	<mvc:annotation-driven></mvc:annotation-driven>
+	<!-- tomcat의 server.xml에 정의돈 url-pattern "/" 무시하고 현재 DispatcherServlet의 url-pattern으로 설정 -->
+	<mvc:default-servlet-handler/>
 	
 	<!-- 부트스트랩 추가 -->
 	<mvc:resources mapping="/resources/**" location="/resources/" />
