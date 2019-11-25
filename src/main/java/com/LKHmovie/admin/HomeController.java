@@ -87,4 +87,9 @@ public class HomeController {
 		
 		return "home_bootstrapTest2";
 	}
+	
+	@RequestMapping(value = "/testRestful.do", method = RequestMethod.GET)
+	public String testRestful(Model model) {
+		return "home_testRestful";
+	}
 }

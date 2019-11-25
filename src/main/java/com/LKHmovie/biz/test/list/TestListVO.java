@@ -1,5 +1,6 @@
 package com.LKHmovie.biz.test.list;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class TestListVO {
@@ -28,8 +29,9 @@ public class TestListVO {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public Date getCreateDate() {
-		return createDate;
+	public String getCreateDate() {
+		SimpleDateFormat simpleCreateDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		return simpleCreateDate.format(createDate);
 	}
 	public void setCreateDate(Date createDate) {
 		this.createDate = createDate;
